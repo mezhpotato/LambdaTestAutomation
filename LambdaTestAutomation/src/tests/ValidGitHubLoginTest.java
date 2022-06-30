@@ -9,7 +9,7 @@ public class ValidGitHubLoginTest extends BaseCode {
 		// Input Parameters
 		String url = "https://accounts.lambdatest.com/dashboard";
 		String email = "mezhpotato";
-		String password = "LenardJen2018Sor@";
+		String password = "NewYork12345!";
 		String nameOfUser = "Lenard Magpantay";
 
 		// Open chrome browser and login to url
@@ -31,7 +31,7 @@ public class ValidGitHubLoginTest extends BaseCode {
 		verifyPageElementDisplayed("//a[text()='Forgot Password?']");
 		// Verify Sign up link
 		verifyPageElementDisplayed("//a[text()='Sign up']");
-
+		pause(3);
 		// Login to GitHub
 		// click GitHub Login button
 		click("//*[text()='Log in with Github']/..");
@@ -41,7 +41,7 @@ public class ValidGitHubLoginTest extends BaseCode {
 		inputValue("//input[@id='password']", password);
 		// click Login button
 		click("//input[@value='Sign in']");
-		pause(5);
+		pause(10);
 		// Validate you land on the dashboard page
 		verifyPageElementDisplayed("//a[text()='Dashboard']"); // Dashboard menu
 		verifyPageElementDisplayed("//span[text()='Hello']"); // Message for User
