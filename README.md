@@ -4,7 +4,9 @@ Read ME. Date: 06/30/2022
 
 Git Repository: https://github.com/mezhpotato/LambdaTestAutomation
 
+
 Installation Instruction:
+
 
 Pre-requisites:
 - JDK version used: 11.0.15.1. Installation link: https://www.oracle.com/ph/java/technologies/javase/jdk11-archive-downloads.html
@@ -12,12 +14,18 @@ Pre-requisites:
 - Chrome browser version used: 103
 - Chromedriver version used: 103
 
+
 Additional Notes:
 - Project is setup in this directory: C:\Workspace
 - Selenium-Java jar version used: 3.14.0
 - Tests are divided on several test files (java class)
 
--IMPORTANT: ValidGoogleLoginTest.java - is blocked by Google Security Sign-in feature and no working around implemented at the moment. (Already checked several references but none has worked yet)
+-IMPORTANT: 
+
+FOR ValidGoogleLoginTest.java 
+- For the script to work existing google profile must be used and already be setup in your chrome browser
+- Google account to be used must have been already registered with the the website
+
 
 1. Clone the repository
 (Note: steps are done using eclipse)
