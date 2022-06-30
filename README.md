@@ -14,6 +14,7 @@ Pre-requisites:
 - Chrome browser version used: 103
 - Chromedriver version used: 103
 - 1 script would require existing Google account to be setup. (See below for details)
+- 1 script would require to setup GitHub account on the script. (See below for details)
 
 
 IMPORTANT Notes:
@@ -29,7 +30,7 @@ FOR ValidGoogleLoginTest.java
 - Google account to be used must have been already registered with the the website.
 - This is a workaround implemented to by-pass the Google Secured login feature.
 
-FOR ValidGoogleLoginTest.java 
+FOR ValidGitHubLoginTest.java 
 - User needs to setup own GitHub credentials in the script to avoid the device verification.
 
 Execution:
