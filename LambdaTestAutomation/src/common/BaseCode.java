@@ -33,15 +33,17 @@ public class BaseCode {
 	}
 
 	public static void openBrowserAndURL_Google(String url, String user) {
+		System.out.println("Closing all instances of Chrome browser");
+		Runtime.getRuntime().exec("taskkill /F /IM chrome.exe /T");
 		System.out.println("Starting the test.");
 		System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + "\\src\\driver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();		
 		options.addArguments("--user-data-dir=C:\\Users\\"+user+"\\AppData\\Local\\Google\\Chrome\\User Data\\");
-        options.setExperimentalOption("useAutomationExtension", false);
-        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-        driver =  new ChromeDriver(options); 
-        pause(10);
+		options.setExperimentalOption("useAutomationExtension", false);
+		options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+		driver =  new ChromeDriver(options); 
+		pause(5);
 		System.out.println("Opened Chrome browser.");
 		driver.get(url);
 		System.out.println(url + " - URL has been opened.");
