@@ -1,5 +1,6 @@
 package common;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,11 +37,11 @@ public class BaseCode {
 		System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + "\\src\\driver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();		
-		options.addArguments("start-maximized");
+		options.addArguments("--user-data-dir=C:\\Users\\"+user+"\\AppData\\Local\\Google\\Chrome\\User Data\\");
         options.setExperimentalOption("useAutomationExtension", false);
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         driver =  new ChromeDriver(options); 
-        driver.manage().deleteAllCookies();
+        pause(10);
 		System.out.println("Opened Chrome browser.");
 		driver.get(url);
 		System.out.println(url + " - URL has been opened.");
@@ -118,10 +121,6 @@ public class BaseCode {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(findElement(locator)).sendKeys(value).build().perform();
 		actions.moveToElement(findElement(locator)).sendKeys(Keys.ENTER).build().perform();
-//		WebElement element = findElement(locator);
-//		element.clear();
-//		element.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-//		element.sendKeys(value);
 		System.out.println("PASSED: Element '" + locator + "' has been entered with value '" + value + "'.");
 	}
 
