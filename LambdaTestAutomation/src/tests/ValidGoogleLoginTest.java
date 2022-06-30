@@ -1,10 +1,12 @@
 package tests;
 
+import java.io.IOException;
+
 import common.BaseCode;
 
 public class ValidGoogleLoginTest extends BaseCode {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// Input Parameters
 		String url = "https://accounts.lambdatest.com/dashboard";
 		String user = "lenar"; //sample profile directory: C:\Users\lenar
@@ -29,11 +31,11 @@ public class ValidGoogleLoginTest extends BaseCode {
 		verifyPageElementDisplayed("//a[text()='Forgot Password?']");
 		// Verify Sign up link
 		verifyPageElementDisplayed("//a[text()='Sign up']");
-
+		pause(3);
 		// Login to GitHub
 		// click GitHub Login button
 		click("//*[text()='Log in with Google']/..");
-		
+		pause(5);
 		// Validate you land on the dashboard page
 		verifyPageElementDisplayed("//a[text()='Dashboard']"); // Dashboard menu
 		verifyPageElementDisplayed("//span[text()='Hello']"); // Message for User
