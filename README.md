@@ -13,6 +13,7 @@ Pre-requisites:
 - IDE to be used is Maven-ready. (e.g. Eclipse. Installation link for Windows: https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2022-06/R/eclipse-inst-jre-win64.exe)
 - Chrome browser version used: 103
 - Chromedriver version used: 103
+- 1 script would require existing Google account to be setup. (See below for details)
 
 
 Additional Notes:
