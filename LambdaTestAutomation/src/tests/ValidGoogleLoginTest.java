@@ -7,15 +7,12 @@ public class ValidGoogleLoginTest extends BaseCode {
 	public static void main(String[] args) {
 		// Input Parameters
 		String url = "https://accounts.lambdatest.com/dashboard";
-		String user = "lenar";
-		String email = "mezhpotatous";
-		String password = "newyork12345!";
-		String nameOfUser = "Lenard Magpantay";
+		String user = "lenar"; //sample profile directory: C:\Users\lenar
+		String nameOfUser = "Lenard Magpantay"; //Change this to match the user's name
 
 		// Open chrome browser and login to url
 		// https://accounts.lambdatest.com/dashboard
 		openBrowserAndURL_Google(url, user);
-//		openBrowserAndURL(url);
 		// Verify Google login button
 		verifyPageElementDisplayed("//*[text()='Log in with Google']/..");
 		// Verify GitHub login button
@@ -36,15 +33,7 @@ public class ValidGoogleLoginTest extends BaseCode {
 		// Login to GitHub
 		// click GitHub Login button
 		click("//*[text()='Log in with Google']/..");
-		// Enter email
-		inputValue("//input[@type='email']", email);
-		//click Next
-		click("(//span[@jsname='V67aGc'])[2]"); //Automation is blocked due to Google Security Sign-in. No work around implemented at the moment.
-		// Enter Password
-		inputValue("//input[@type='password']", password);
-		// click Login button
-		click("(//span[@jsname='V67aGc'])[2]");
-		pause(10);
+		
 		// Validate you land on the dashboard page
 		verifyPageElementDisplayed("//a[text()='Dashboard']"); // Dashboard menu
 		verifyPageElementDisplayed("//span[text()='Hello']"); // Message for User
