@@ -7,9 +7,9 @@ public class ValidEmailLoginTest extends BaseCode {
 	public static void main(String[] args) {
 		//Input Parameters
 		String url = "https://accounts.lambdatest.com/dashboard";
-		String email = "mezhpotato@gmail.com";
-		String password = "password12345";
-		String nameOfUser = "Lenard Magpantay";
+		String email = "";
+		String password = "";
+		String nameOfUser = "";
 		
 		//Open chrome browser and login to url https://accounts.lambdatest.com/dashboard
 		openBrowserAndURL(url);
