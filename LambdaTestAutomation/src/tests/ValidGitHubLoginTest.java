@@ -8,9 +8,9 @@ public class ValidGitHubLoginTest extends BaseCode {
 		// TODO Auto-generated method stub
 		// Input Parameters
 		String url = "https://accounts.lambdatest.com/dashboard";
-		String email = "mezhpotato";
-		String password = "NewYork12345!";
-		String nameOfUser = "Lenard Magpantay";
+		String email = "";
+		String password = "";
+		String nameOfUser = "";
 
 		// Open chrome browser and login to url
 		// https://accounts.lambdatest.com/dashboard
